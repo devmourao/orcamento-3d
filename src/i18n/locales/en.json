@@ -1,0 +1,31 @@
+{
+  "header": {
+    "brand": "maker.mourao.info",
+    "title": "3D Printing & Additive Manufacturing",
+    "subtitle": "Custom high-precision 3D printing on demand"
+  },
+  "form": {
+    "projectName": "Project Name",
+    "projectNamePlaceholder": "e.g., Custom Hose Adapter",
+    "fileUrl": "Model Link (Drive / Thingiverse / Printables)",
+    "material": "Material",
+    "color": "Color",
+    "quantity": "Quantity",
+    "notes": "Technical Notes / Infill",
+    "notesPlaceholder": "e.g., 30% infill, TPU flexible fit",
+    "submit": "Add to Quote Cart"
+  },
+  "cart": {
+    "title": "Your Quote Request",
+    "empty": "No items added yet.",
+    "checkoutWhatsApp": "Send Quote via WhatsApp",
+    "removeItem": "Remove"
+  },
+  "whatsapp": {
+    "greeting": "Hello! I would like to request a 3D printing quote via maker.mourao.info for the following items:"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "ecosystem": "Part of the Mourão Digital Ecosystem"
+  }
+}

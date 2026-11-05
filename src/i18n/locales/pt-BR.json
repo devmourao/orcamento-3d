@@ -1,0 +1,31 @@
+{
+  "header": {
+    "brand": "maker.mourao.info",
+    "title": "Impressão 3D & Manufatura Aditiva",
+    "subtitle": "Impressão 3D sob medida de alta precisão"
+  },
+  "form": {
+    "projectName": "Nome do Projeto",
+    "projectNamePlaceholder": "Ex: Adaptador para Aspirador",
+    "fileUrl": "Link do Modelo (Drive / Thingiverse / Printables)",
+    "material": "Material",
+    "color": "Cor",
+    "quantity": "Quantidade",
+    "notes": "Observações Técnicas / Preenchimento",
+    "notesPlaceholder": "Ex: 30% de preenchimento, encaixe flexível em TPU",
+    "submit": "Adicionar ao Orçamento"
+  },
+  "cart": {
+    "title": "Seu Pedido de Orçamento",
+    "empty": "Nenhum item adicionado ainda.",
+    "checkoutWhatsApp": "Enviar Orçamento via WhatsApp",
+    "removeItem": "Remover"
+  },
+  "whatsapp": {
+    "greeting": "Olá! Gostaria de solicitar um orçamento de impressão 3D via maker.mourao.info para os seguintes itens:"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "ecosystem": "Integrante do Ecossistema Digital Mourão"
+  }
+}
