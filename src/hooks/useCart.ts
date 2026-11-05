@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { PrintItem } from '../types/Order';
+import type { PrintItem } from '../types/order';
 
 const STORAGE_KEY = '@3d-print-quotes:cart-v1';
 
