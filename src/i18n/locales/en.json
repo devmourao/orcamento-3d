@@ -1,0 +1,26 @@
+{
+  "header": {
+    "title": "3D Printing Quotes",
+    "subtitle": "Custom additive manufacturing on demand"
+  },
+  "form": {
+    "projectName": "Project Name",
+    "projectNamePlaceholder": "e.g., Custom Hose Adapter",
+    "fileUrl": "Model Link (Drive / Thingiverse / Printables)",
+    "material": "Material",
+    "color": "Color",
+    "quantity": "Quantity",
+    "notes": "Technical Notes / Infill",
+    "notesPlaceholder": "e.g., 30% infill, flexible fit needed",
+    "submit": "Add to Quote Cart"
+  },
+  "cart": {
+    "title": "Your Quote Request",
+    "empty": "No items added yet.",
+    "checkoutWhatsApp": "Send Quote via WhatsApp",
+    "removeItem": "Remove"
+  },
+  "whatsapp": {
+    "greeting": "Hello! I would like to request a quote for the following 3D print items:"
+  }
+}
