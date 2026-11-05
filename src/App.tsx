@@ -1,13 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { OrderForm } from './components/OrderForm';
+import { CartList } from './components/CartList';
+import { useCart } from './hooks/useCart';
 
 function App() {
   const { t } = useTranslation();
-
-  const handleAddItem = (item: any) => {
-    console.log('New 3D Print Quote Item:', item);
-  };
+  const { items, addItem, removeItem } = useCart();
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col items-center justify-start p-6 antialiased">
@@ -24,13 +23,8 @@ function App() {
       </header>
 
       <main className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
-        <OrderForm onAddItem={handleAddItem} />
-
-        <section className="bg-slate-900/60 p-6 rounded-xl border border-slate-800 flex items-center justify-center">
-          <p className="text-slate-500 text-sm font-medium">
-            {t('cart.empty')}
-          </p>
-        </section>
+        <OrderForm onAddItem={addItem} />
+        <CartList items={items} onRemoveItem={removeItem} />
       </main>
     </div>
   );
