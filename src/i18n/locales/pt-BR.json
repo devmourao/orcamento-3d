@@ -1,7 +1,8 @@
 {
   "header": {
-    "title": "Orçamentos de Impressão 3D",
-    "subtitle": "Manufatura aditiva sob medida"
+    "brand": "maker.mourao.info",
+    "title": "Impressão 3D & Manufatura Aditiva",
+    "subtitle": "Impressão 3D sob medida de alta precisão"
   },
   "form": {
     "projectName": "Nome do Projeto",
@@ -11,7 +12,7 @@
     "color": "Cor",
     "quantity": "Quantidade",
     "notes": "Observações Técnicas / Preenchimento",
-    "notesPlaceholder": "Ex: 30% de preenchimento, encaixe flexível",
+    "notesPlaceholder": "Ex: 30% de preenchimento, encaixe flexível em TPU",
     "submit": "Adicionar ao Orçamento"
   },
   "cart": {
@@ -21,6 +22,10 @@
     "removeItem": "Remover"
   },
   "whatsapp": {
-    "greeting": "Olá! Gostaria de solicitar um orçamento para os seguintes itens de impressão 3D:"
+    "greeting": "Olá! Gostaria de solicitar um orçamento de impressão 3D via maker.mourao.info para os seguintes itens:"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "ecosystem": "Integrante do Ecossistema Digital Mourão"
   }
 }

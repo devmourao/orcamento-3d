@@ -1,7 +1,8 @@
 {
   "header": {
-    "title": "3D Printing Quotes",
-    "subtitle": "Custom additive manufacturing on demand"
+    "brand": "maker.mourao.info",
+    "title": "3D Printing & Additive Manufacturing",
+    "subtitle": "Custom high-precision 3D printing on demand"
   },
   "form": {
     "projectName": "Project Name",
@@ -11,7 +12,7 @@
     "color": "Color",
     "quantity": "Quantity",
     "notes": "Technical Notes / Infill",
-    "notesPlaceholder": "e.g., 30% infill, flexible fit needed",
+    "notesPlaceholder": "e.g., 30% infill, TPU flexible fit",
     "submit": "Add to Quote Cart"
   },
   "cart": {
@@ -21,6 +22,10 @@
     "removeItem": "Remove"
   },
   "whatsapp": {
-    "greeting": "Hello! I would like to request a quote for the following 3D print items:"
+    "greeting": "Hello! I would like to request a 3D printing quote via maker.mourao.info for the following items:"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "ecosystem": "Part of the Mourão Digital Ecosystem"
   }
 }
