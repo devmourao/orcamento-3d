@@ -1,75 +1,50 @@
-# React + TypeScript + Vite
+# **🛠️ maker.mourao.info — 3D Printing & Additive Manufacturing Platform**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly responsive web application designed to streamline quote requests for a custom 3D printing and additive manufacturing service. Built with **React**, **TypeScript**, **Tailwind CSS v4**, and **i18n** localization.
 
-Currently, two official plugins are available:
+👉 **Live Demo:** [https\://maker.mourao.info](https://maker.mourao.info)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## **🎯 Business Problem & Architectural Solution**
 
-## React Compiler
+Handling 3D printing requests via unstructured messaging often leads to missing critical technical specifications (filament material types, color choices, infill percentages, and 3D model links).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**The Solution:** This platform provides a structured, accessible quote generator where customers define technical parameters (PLA, flexible TPU, PETG) and submit model links. The state is managed locally and serialized into a pre-formatted, URI-encoded order string sent directly to the manufacturer's WhatsApp.
 
-## Expanding the ESLint configuration
+## **✨ Key Features & Technical Highlights**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Internationalization (i18n):** Native support for English (`en`) and Brazilian Portuguese (`pt-BR`) with automatic browser language detection via `react-i18next`.  
+* **Custom Hook State Management:** Complete decoupling of UI and business logic through the `useCart` hook, synchronized seamlessly with `LocalStorage`.  
+* **Strict Type Safety:** Domain model interfaces (`PrintItem`, `FilamentMaterial`) enforcing type safety across component props and state mutations.  
+* **Accessible Tech-Dark UI:** High-contrast Dark Mode design complying with WCAG contrast ratios, styled using Tailwind CSS v4.  
+* **Git Flow Workflow:** Enterprise-grade branch management (`main`, `develop`, `feature/*`, `release/*`, `docs/*`) ensuring clean production releases.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## **🚀 Tech Stack**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Frontend Library:** React 18+ (Vite)  
+* **Language:** TypeScript  
+* **Styling:** Tailwind CSS v4  
+* **Localization:** `react-i18next` & `i18next-browser-languagedetector`  
+* **Deployment:** Netlify
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## **📁 Ecosystem Integration**
 
-```
+This project is part of the **Mourão Digital Ecosystem**:
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+* **Developer Portfolio:** [dev.mourao.info](https://dev.mourao.info)  
+* **Technical Blog:** [blog.mourao.info](https://blog.mourao.info)  
+* **3D Printing Hub:** [maker.mourao.info](https://maker.mourao.info)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## **⚙️ Local Setup**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository:**`git clone [https://github.com/devmourao/orcamento-3d.git](https://github.com/devmourao/orcamento-3d.git)`  
+2. **Navigate to project directory:**`cd orcamento-3d`  
+3. **Install dependencies:**`npm install`  
+4. **Start development server:**`npm run dev`
 
-```
+## **🔀 Git Flow Strategy Executed**
+
+* `main`: Production-ready code deployed live.  
+* `develop`: Integration branch for finished features.  
+* `feature/*`: Isolated branches for UI components, custom hooks, and WhatsApp checkout logic.  
+* `docs/*`: Dedicated documentation branch for project showcase.
+
