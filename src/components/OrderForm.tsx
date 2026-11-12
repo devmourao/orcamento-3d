@@ -41,9 +41,9 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 shadow-xl space-y-4"
+      className="space-y-4 rounded-2xl border border-[color:var(--maker-border)] bg-[color:var(--maker-surface)]/90 p-6 shadow-xl"
     >
-      <h2 className="text-xl font-bold text-slate-100 mb-4 border-b border-slate-800 pb-2">
+      <h2 className="font-display mb-4 border-b border-[color:var(--maker-border)] pb-2 text-xl font-bold text-[color:var(--maker-text)]">
         {t('header.title')}
       </h2>
 
@@ -51,7 +51,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
       <div>
         <label
           htmlFor="projectName"
-          className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1"
+          className="mb-1 block text-xs font-semibold uppercase tracking-wider text-[color:var(--maker-muted)]"
         >
           {t('form.projectName')} *
         </label>
@@ -62,7 +62,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
           value={projectName}
           onChange={(e) => setProjectName(e.target.value)}
           placeholder={t('form.projectNamePlaceholder')}
-          className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm"
+          className="w-full rounded-lg border border-[color:var(--maker-border)] bg-[color:var(--maker-bg)] px-4 py-2 text-sm text-[color:var(--maker-text)] placeholder:text-[color:var(--maker-muted)]/70 transition-all focus:outline-none focus:ring-2 focus:ring-[color:var(--maker-accent)]"
         />
       </div>
 
@@ -70,7 +70,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
       <div>
         <label
           htmlFor="fileUrl"
-          className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1"
+          className="mb-1 block text-xs font-semibold uppercase tracking-wider text-[color:var(--maker-muted)]"
         >
           {t('form.fileUrl')} *
         </label>
@@ -81,7 +81,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
           value={fileUrl}
           onChange={(e) => setFileUrl(e.target.value)}
           placeholder="https://thingiverse.com/..."
-          className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm"
+          className="w-full rounded-lg border border-[color:var(--maker-border)] bg-[color:var(--maker-bg)] px-4 py-2 text-sm text-[color:var(--maker-text)] placeholder:text-[color:var(--maker-muted)]/70 transition-all focus:outline-none focus:ring-2 focus:ring-[color:var(--maker-accent)]"
         />
       </div>
 
@@ -91,7 +91,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
         <div>
           <label
             htmlFor="material"
-            className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1"
+            className="mb-1 block text-xs font-semibold uppercase tracking-wider text-[color:var(--maker-muted)]"
           >
             {t('form.material')}
           </label>
@@ -99,10 +99,10 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
             id="material"
             value={material}
             onChange={(e) => setMaterial(e.target.value as FilamentMaterial)}
-            className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm"
+            className="w-full rounded-lg border border-[color:var(--maker-border)] bg-[color:var(--maker-bg)] px-3 py-2 text-sm text-[color:var(--maker-text)] transition-all focus:outline-none focus:ring-2 focus:ring-[color:var(--maker-accent)]"
           >
             <option value="PLA">PLA</option>
-            <option value="TPU">TPU (Flexible)</option>
+            <option value="TPU">TPU</option>
             <option value="PETG">PETG</option>
           </select>
         </div>
@@ -111,7 +111,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
         <div>
           <label
             htmlFor="color"
-            className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1"
+            className="mb-1 block text-xs font-semibold uppercase tracking-wider text-[color:var(--maker-muted)]"
           >
             {t('form.color')}
           </label>
@@ -121,7 +121,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
             value={color}
             onChange={(e) => setColor(e.target.value)}
             placeholder="Black, Red..."
-            className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm"
+            className="w-full rounded-lg border border-[color:var(--maker-border)] bg-[color:var(--maker-bg)] px-4 py-2 text-sm text-[color:var(--maker-text)] placeholder:text-[color:var(--maker-muted)]/70 transition-all focus:outline-none focus:ring-2 focus:ring-[color:var(--maker-accent)]"
           />
         </div>
 
@@ -129,7 +129,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
         <div>
           <label
             htmlFor="quantity"
-            className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1"
+            className="mb-1 block text-xs font-semibold uppercase tracking-wider text-[color:var(--maker-muted)]"
           >
             {t('form.quantity')}
           </label>
@@ -139,7 +139,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
             min="1"
             value={quantity}
             onChange={(e) => setQuantity(parseInt(e.target.value) || 1)}
-            className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm"
+            className="w-full rounded-lg border border-[color:var(--maker-border)] bg-[color:var(--maker-bg)] px-4 py-2 text-sm text-[color:var(--maker-text)] transition-all focus:outline-none focus:ring-2 focus:ring-[color:var(--maker-accent)]"
           />
         </div>
       </div>
@@ -148,7 +148,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
       <div>
         <label
           htmlFor="notes"
-          className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1"
+          className="mb-1 block text-xs font-semibold uppercase tracking-wider text-[color:var(--maker-muted)]"
         >
           {t('form.notes')}
         </label>
@@ -158,14 +158,14 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           placeholder={t('form.notesPlaceholder')}
-          className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm resize-none"
+          className="w-full resize-none rounded-lg border border-[color:var(--maker-border)] bg-[color:var(--maker-bg)] px-4 py-2 text-sm text-[color:var(--maker-text)] placeholder:text-[color:var(--maker-muted)]/70 transition-all focus:outline-none focus:ring-2 focus:ring-[color:var(--maker-accent)]"
         />
       </div>
 
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm shadow-md cursor-pointer mt-2"
+        className="mt-2 w-full cursor-pointer rounded-lg bg-[color:var(--maker-accent)] py-2.5 text-sm font-semibold text-[color:var(--maker-on-accent)] shadow-md transition-colors hover:bg-[color:var(--maker-accent-hover)] active:brightness-95"
       >
         {t('form.submit')}
       </button>

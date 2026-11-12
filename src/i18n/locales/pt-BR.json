@@ -2,7 +2,9 @@
   "header": {
     "brand": "maker.mourao.info",
     "title": "Impressão 3D & Manufatura Aditiva",
-    "subtitle": "Impressão 3D sob medida de alta precisão"
+    "subtitle": "Impressão 3D sob medida de alta precisão",
+    "navQuote": "Orçamento",
+    "navLab": "Laboratório"
   },
   "form": {
     "projectName": "Nome do Projeto",
@@ -27,5 +29,113 @@
   "footer": {
     "rights": "Todos os direitos reservados.",
     "ecosystem": "Integrante do Ecossistema Digital Mourão"
+  },
+  "lab": {
+    "eyebrow": "maker.mourao.info / lab",
+    "title": "Laboratório",
+    "subtitle": "Peças já impressas, testadas e documentadas — do utilitário doméstico ao protótipo mecânico.",
+    "filtersLabel": "Filtrar por categoria",
+    "filterAll": "Todos",
+    "featured": "Destaque",
+    "viewDetails": "Ver detalhes",
+    "viewModel": "Ver modelo",
+    "openDetails": "Abrir detalhes de {{title}}",
+    "close": "Fechar",
+    "highlights": "Destaques técnicos",
+    "empty": "Nenhum projeto nesta categoria ainda.",
+    "specs": {
+      "material": "Material",
+      "category": "Categoria",
+      "year": "Ano"
+    },
+    "categories": {
+      "utilities": "Utilitários",
+      "decor": "Decoração",
+      "prototypes": "Protótipos",
+      "mechanical": "Mecânicos",
+      "miniatures": "Miniaturas"
+    },
+    "projects": {
+      "hose-adapter": {
+        "title": "Adaptador de Mangueira",
+        "summary": "Transição sob medida entre diâmetros de aspirador e ferramenta.",
+        "description": "Peça utilitária impressa sob demanda para casar mangueira e bocal com folga controlada. Validada em uso diário com PETG para resistência térmica e impacto.",
+        "highlights": [
+          "Ensaio de encaixe com 0,2 mm de folga",
+          "Paredes 1,6 mm e 30% de preenchimento",
+          "Orientação vertical para resistência axial"
+        ]
+      },
+      "filament-rack": {
+        "title": "Rack de Filamento",
+        "summary": "Organizador modular para bobinas no banco de trabalho.",
+        "description": "Estrutura modular para manter bobinas alinhadas e rotuladas. Pensado para crescer por módulos e caber em prateleiras estreitas.",
+        "highlights": [
+          "Encaixe por pressão sem parafusos",
+          "Compatível com bobinas de 1 kg",
+          "PLA rígido com nervuras de reforço"
+        ]
+      },
+      "desk-organizer": {
+        "title": "Organizador de Mesa",
+        "summary": "Compartimentos para canetas, SD cards e bits de ferramenta.",
+        "description": "Peça de bancada com visual limpo e divisórias internas. Combina função e presença no setup do maker.",
+        "highlights": [
+          "Camadas aparentes como textura intencional",
+          "Base antiderrapante com TPU opcional",
+          "Impressão sem suporte"
+        ]
+      },
+      "gearbox-proto": {
+        "title": "Protótipo de Caixa de Engrenagens",
+        "summary": "Validação rápida de folgas e alinhamento de eixos.",
+        "description": "Protótipo funcional para checar meshing e ruído antes do lote final. Iterações rápidas com PETG e eixos metálicos reaproveitados.",
+        "highlights": [
+          "Tolerâncias calibradas por ensaio",
+          "Caixa bipartida para inspeção",
+          "Ciclos de carga documentados"
+        ]
+      },
+      "drone-mount": {
+        "title": "Suporte de Câmera para Drone",
+        "summary": "Mount leve com amortecimento e acesso rápido.",
+        "description": "Peça mecânica leve para fixar action cam com vibração controlada. Prioriza rigidez pontual e massa baixa.",
+        "highlights": [
+          "Infill 40% nas zonas de carga",
+          "Furos reforçados para inserts M3",
+          "Geometria otimizada para print time"
+        ]
+      },
+      "flexible-gasket": {
+        "title": "Junta Flexível em TPU",
+        "summary": "Vedação elástica para carcaça e entrada de cabo.",
+        "description": "Gaxeta impressa em TPU 95A para vedar carcaça improvisada. Substitui junta cortada à mão com repetibilidade melhor.",
+        "highlights": [
+          "Perímetro contínuo sem costura frágil",
+          "Compressão controlada em 1,2 mm",
+          "Reimprimível sob demanda"
+        ]
+      },
+      "tabletop-mini": {
+        "title": "Miniatura de Mesa",
+        "summary": "Figura de escala reduzida com detalhe fino.",
+        "description": "Peça decorativa/miniatura impressa com layer height baixo para preservar relevos. Acabamento pós-print mínimo.",
+        "highlights": [
+          "Layer height 0,12 mm",
+          "Suportes em árvore nas zonas críticas",
+          "Pintura opcional após cura"
+        ]
+      },
+      "lamp-shade": {
+        "title": "Cúpula de Luminária",
+        "summary": "Difusor com padrão de camadas que filtra a luz.",
+        "description": "Cúpula semiaberta que transforma as layer lines em textura luminosa. Pensada para LED de baixa potência.",
+        "highlights": [
+          "Paredes 0,8 mm para translucidez",
+          "Vaso mode / spiralize",
+          "Encaixe na base padrão E27 adapter"
+        ]
+      }
+    }
   }
 }
