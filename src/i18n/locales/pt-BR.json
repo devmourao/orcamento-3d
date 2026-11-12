@@ -4,7 +4,56 @@
     "title": "Impressão 3D & Manufatura Aditiva",
     "subtitle": "Impressão 3D sob medida de alta precisão",
     "navQuote": "Orçamento",
-    "navLab": "Laboratório"
+    "navLab": "Laboratório",
+    "navSources": "Fontes"
+  },
+  "cta": {
+    "toQuote": "Pedir orçamento",
+    "printLikeThis": "Quero imprimir algo assim",
+    "haveFile": "Já tenho o arquivo — pedir orçamento"
+  },
+  "quote": {
+    "eyebrow": "maker.mourao.info / pedido",
+    "title": "Orçamento",
+    "subtitle": "Descreva a peça, envie o link do modelo e receba o retorno pelo WhatsApp."
+  },
+  "sources": {
+    "eyebrow": "maker.mourao.info / fontes",
+    "title": "Modelos gratuitos",
+    "subtitle": "A impressão sob demanda começa com um arquivo. Estes sites reúnem milhares de modelos STL e 3MF gratuitos — escolha um, copie o link e peça o orçamento.",
+    "bridge": "Encontrou o modelo? Cole o link no formulário de orçamento e diga material, cor e quantidade.",
+    "sites": {
+      "printables": {
+        "mark": "PR",
+        "name": "Printables",
+        "blurb": "Comunidade forte, modelos gratuitos e bem documentados."
+      },
+      "thingiverse": {
+        "mark": "TV",
+        "name": "Thingiverse",
+        "blurb": "Biblioteca clássica com enorme volume de designs open source."
+      },
+      "makerworld": {
+        "mark": "MW",
+        "name": "MakerWorld",
+        "blurb": "Catálogo moderno com perfis de impressão prontos."
+      },
+      "myminifactory": {
+        "mark": "MM",
+        "name": "MyMiniFactory",
+        "blurb": "Peças curadas, inclusive miniaturas e utilitários."
+      },
+      "cults": {
+        "mark": "CU",
+        "name": "Cults",
+        "blurb": "Marketplace com seção gratuita e designs autorais."
+      },
+      "thangs": {
+        "mark": "TH",
+        "name": "Thangs",
+        "blurb": "Busca 3D e modelos comunitários para download."
+      }
+    }
   },
   "form": {
     "projectName": "Nome do Projeto",
@@ -43,6 +92,7 @@
     "close": "Fechar",
     "highlights": "Destaques técnicos",
     "empty": "Nenhum projeto nesta categoria ainda.",
+    "ctaHint": "Gostou de alguma peça? Peça uma impressão sob demanda com o seu arquivo.",
     "specs": {
       "material": "Material",
       "category": "Categoria",

@@ -4,7 +4,56 @@
     "title": "3D Printing & Additive Manufacturing",
     "subtitle": "Custom high-precision 3D printing on demand",
     "navQuote": "Quote",
-    "navLab": "Laboratory"
+    "navLab": "Laboratory",
+    "navSources": "Sources"
+  },
+  "cta": {
+    "toQuote": "Request a quote",
+    "printLikeThis": "I want something like this printed",
+    "haveFile": "I have the file — request a quote"
+  },
+  "quote": {
+    "eyebrow": "maker.mourao.info / order",
+    "title": "Quote",
+    "subtitle": "Describe the part, share the model link, and get a reply on WhatsApp."
+  },
+  "sources": {
+    "eyebrow": "maker.mourao.info / sources",
+    "title": "Free model libraries",
+    "subtitle": "On-demand printing starts with a file. These sites host thousands of free STL and 3MF models — pick one, copy the link, and request a quote.",
+    "bridge": "Found a model? Paste the link in the quote form and tell us material, color, and quantity.",
+    "sites": {
+      "printables": {
+        "mark": "PR",
+        "name": "Printables",
+        "blurb": "Strong community with free, well-documented models."
+      },
+      "thingiverse": {
+        "mark": "TV",
+        "name": "Thingiverse",
+        "blurb": "Classic library with a huge open-source catalog."
+      },
+      "makerworld": {
+        "mark": "MW",
+        "name": "MakerWorld",
+        "blurb": "Modern catalog with ready-to-print profiles."
+      },
+      "myminifactory": {
+        "mark": "MM",
+        "name": "MyMiniFactory",
+        "blurb": "Curated parts, including miniatures and utilities."
+      },
+      "cults": {
+        "mark": "CU",
+        "name": "Cults",
+        "blurb": "Marketplace with a free section and original designs."
+      },
+      "thangs": {
+        "mark": "TH",
+        "name": "Thangs",
+        "blurb": "3D search and community models for download."
+      }
+    }
   },
   "form": {
     "projectName": "Project Name",
@@ -43,6 +92,7 @@
     "close": "Close",
     "highlights": "Technical highlights",
     "empty": "No projects in this category yet.",
+    "ctaHint": "Like a piece? Request an on-demand print with your own file.",
     "specs": {
       "material": "Material",
       "category": "Category",

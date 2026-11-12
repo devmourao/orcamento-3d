@@ -1,8 +1,8 @@
-import { OrderForm } from './components/OrderForm';
-import { CartList } from './components/CartList';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Laboratory } from './components/Laboratory';
+import { ModelSources } from './components/ModelSources';
+import { QuoteSection } from './components/QuoteSection';
 import { useCart } from './hooks/useCart';
 
 function App() {
@@ -19,18 +19,13 @@ function App() {
         <Header />
 
         <main className="flex flex-1 flex-col gap-16 pb-10 md:gap-20">
-          <section
-            id="orcamento"
-            className="scroll-mt-28 w-full space-y-4"
-            aria-label="Quote"
-          >
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <OrderForm onAddItem={addItem} />
-              <CartList items={items} onRemoveItem={removeItem} />
-            </div>
-          </section>
-
           <Laboratory />
+          <ModelSources />
+          <QuoteSection
+            items={items}
+            onAddItem={addItem}
+            onRemoveItem={removeItem}
+          />
         </main>
 
         <Footer />

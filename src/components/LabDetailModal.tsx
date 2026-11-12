@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { LabProject } from '../types/lab';
 import { LabVisual } from './LabVisual';
+import { SectionCta } from './SectionCta';
 
 interface LabDetailModalProps {
   project: LabProject | null;
@@ -137,8 +138,13 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
           </dl>
         </div>
 
-        {project.modelUrl && (
-          <div className="border-t border-[color:var(--maker-border)] px-5 py-4 sm:px-6">
+        <div className="flex flex-wrap items-center gap-3 border-t border-[color:var(--maker-border)] px-5 py-4 sm:px-6">
+          <SectionCta
+            labelKey="cta.printLikeThis"
+            className="text-xs"
+            onNavigate={onClose}
+          />
+          {project.modelUrl && (
             <a
               href={project.modelUrl}
               target="_blank"
@@ -147,8 +153,8 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
             >
               {t('lab.viewModel')}
             </a>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

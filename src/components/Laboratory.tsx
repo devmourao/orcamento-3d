@@ -8,6 +8,7 @@ import {
 } from '../types/lab';
 import { LabCard } from './LabCard';
 import { LabDetailModal } from './LabDetailModal';
+import { SectionCta } from './SectionCta';
 
 type FilterId = 'all' | LabCategoryId;
 
@@ -30,7 +31,7 @@ export function Laboratory() {
   return (
     <section
       id="laboratorio"
-      className="scroll-mt-24 w-full space-y-8"
+      className="scroll-mt-28 w-full space-y-8"
       aria-labelledby="lab-heading"
     >
       <div className="mx-auto max-w-2xl space-y-3 text-center">
@@ -96,6 +97,13 @@ export function Laboratory() {
           ))}
         </div>
       )}
+
+      <div className="flex flex-col items-center gap-3 pt-2 text-center">
+        <p className="max-w-md text-sm text-[color:var(--maker-muted)]">
+          {t('lab.ctaHint')}
+        </p>
+        <SectionCta labelKey="cta.printLikeThis" />
+      </div>
 
       <LabDetailModal project={selected} onClose={() => setSelected(null)} />
     </section>
