@@ -1,5 +1,3 @@
-import type { FilamentMaterial } from './order';
-
 export type LabCategoryId =
   | 'utilities'
   | 'decor'
@@ -7,16 +5,22 @@ export type LabCategoryId =
   | 'mechanical'
   | 'miniatures';
 
-export interface LabProject {
+/** Display model for Laboratory cards (blog-backed or local fallback). */
+export interface LabItem {
   id: string;
   category: LabCategoryId;
-  featured?: boolean;
-  material: FilamentMaterial;
+  featured: boolean;
+  title: string;
+  summary: string;
+  description: string;
+  highlights: string[];
   year: number;
-  /** CSS accent used by the visual placeholder */
   accent: string;
-  /** Optional external model / gallery link */
+  material?: string;
+  thumbnail?: string;
+  blogUrl?: string;
   modelUrl?: string;
+  source: 'blog' | 'local';
 }
 
 export const LAB_CATEGORIES: LabCategoryId[] = [
