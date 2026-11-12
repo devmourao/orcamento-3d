@@ -11,7 +11,7 @@ export function Footer() {
           href="https://maker.mourao.info"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold text-[color:var(--maker-text)] transition-colors hover:text-[color:var(--maker-accent)]"
+          className="font-semibold text-[color:var(--maker-text)] transition-colors hover:text-[color:var(--maker-brand)]"
         >
           maker.mourao.info
         </a>

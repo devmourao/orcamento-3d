@@ -2,15 +2,19 @@
 @import 'tailwindcss';
 
 :root {
+  /* Palette derived from the maker logo mark (blue disc + orange M) */
   --maker-bg: #090c10;
-  --maker-surface: #12171f;
-  --maker-border: #243041;
+  --maker-surface: #101820;
+  --maker-border: #274057;
   --maker-text: #eef2f7;
-  --maker-muted: #93a0b4;
-  --maker-accent: #f0a05a;
-  --maker-accent-hover: #f5b57a;
-  --maker-accent-soft: rgba(240, 160, 90, 0.14);
+  --maker-muted: #93a4b8;
+  --maker-accent: #e8893a;
+  --maker-accent-hover: #f09a52;
+  --maker-accent-soft: rgba(232, 137, 58, 0.16);
   --maker-on-accent: #1a1208;
+  --maker-brand: #3e7eb4;
+  --maker-brand-strong: #2f6a9c;
+  --maker-brand-soft: rgba(62, 126, 180, 0.18);
   --maker-success: #2f9e7a;
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
@@ -36,12 +40,17 @@
   .font-mono {
     font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
   }
+
+  :focus-visible {
+    outline: 2px solid var(--maker-brand);
+    outline-offset: 2px;
+  }
 }
 
 .maker-shell {
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(240, 160, 90, 0.12), transparent 55%),
-    radial-gradient(900px 500px at 95% 5%, rgba(45, 212, 191, 0.08), transparent 50%),
+    radial-gradient(1100px 560px at 8% -8%, rgba(232, 137, 58, 0.14), transparent 55%),
+    radial-gradient(900px 520px at 96% 0%, rgba(62, 126, 180, 0.16), transparent 52%),
     var(--maker-bg);
 }
 
@@ -51,7 +60,7 @@
   inset: 0;
   opacity: 0.22;
   background-image:
-    linear-gradient(rgba(147, 160, 180, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(62, 126, 180, 0.12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(147, 160, 180, 0.05) 1px, transparent 1px);
   background-size: 48px 12px, 48px 48px;
   mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 92%);

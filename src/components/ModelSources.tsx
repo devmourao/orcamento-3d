@@ -12,7 +12,7 @@ export function ModelSources() {
       aria-labelledby="sources-heading"
     >
       <div className="mx-auto max-w-2xl space-y-3 text-center">
-        <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--maker-accent)]">
+        <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--maker-brand)]">
           {t('sources.eyebrow')}
         </p>
         <h2
