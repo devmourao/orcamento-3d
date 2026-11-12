@@ -43,9 +43,9 @@ export const OrderForm: React.FC<OrderFormProps> = ({ onAddItem }) => {
       onSubmit={handleSubmit}
       className="space-y-4 rounded-2xl border border-[color:var(--maker-border)] bg-[color:var(--maker-surface)]/90 p-6 shadow-xl"
     >
-      <h2 className="font-display mb-4 border-b border-[color:var(--maker-border)] pb-2 text-xl font-bold text-[color:var(--maker-text)]">
-        {t('header.title')}
-      </h2>
+      <h3 className="font-display mb-4 border-b border-[color:var(--maker-border)] pb-2 text-xl font-bold text-[color:var(--maker-text)]">
+        {t('quote.title')}
+      </h3>
 
       {/* Project Name */}
       <div>

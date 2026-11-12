@@ -29,20 +29,26 @@ export function Header() {
 
         <div className="flex flex-wrap items-center gap-3">
           <nav
-            className="flex items-center gap-1 rounded-xl border border-[color:var(--maker-border)] bg-[color:var(--maker-surface)] p-1"
+            className="flex flex-wrap items-center gap-1 rounded-xl border border-[color:var(--maker-border)] bg-[color:var(--maker-surface)] p-1"
             aria-label="Primary"
           >
-            <a
-              href="#orcamento"
-              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-accent-soft)] hover:text-[color:var(--maker-accent)]"
-            >
-              {t('header.navQuote')}
-            </a>
             <a
               href="#laboratorio"
               className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-accent-soft)] hover:text-[color:var(--maker-accent)]"
             >
               {t('header.navLab')}
+            </a>
+            <a
+              href="#fontes"
+              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-accent-soft)] hover:text-[color:var(--maker-accent)]"
+            >
+              {t('header.navSources')}
+            </a>
+            <a
+              href="#orcamento"
+              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-accent-soft)] hover:text-[color:var(--maker-accent)]"
+            >
+              {t('header.navQuote')}
             </a>
           </nav>
           <LanguageSwitcher />
