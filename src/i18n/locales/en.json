@@ -2,7 +2,9 @@
   "header": {
     "brand": "maker.mourao.info",
     "title": "3D Printing & Additive Manufacturing",
-    "subtitle": "Custom high-precision 3D printing on demand"
+    "subtitle": "Custom high-precision 3D printing on demand",
+    "navQuote": "Quote",
+    "navLab": "Laboratory"
   },
   "form": {
     "projectName": "Project Name",
@@ -27,5 +29,113 @@
   "footer": {
     "rights": "All rights reserved.",
     "ecosystem": "Part of the Mourão Digital Ecosystem"
+  },
+  "lab": {
+    "eyebrow": "maker.mourao.info / lab",
+    "title": "Laboratory",
+    "subtitle": "Printed, tested, and documented pieces — from household utilities to mechanical prototypes.",
+    "filtersLabel": "Filter by category",
+    "filterAll": "All",
+    "featured": "Featured",
+    "viewDetails": "View details",
+    "viewModel": "View model",
+    "openDetails": "Open details for {{title}}",
+    "close": "Close",
+    "highlights": "Technical highlights",
+    "empty": "No projects in this category yet.",
+    "specs": {
+      "material": "Material",
+      "category": "Category",
+      "year": "Year"
+    },
+    "categories": {
+      "utilities": "Utilities",
+      "decor": "Decor",
+      "prototypes": "Prototypes",
+      "mechanical": "Mechanical",
+      "miniatures": "Miniatures"
+    },
+    "projects": {
+      "hose-adapter": {
+        "title": "Hose Adapter",
+        "summary": "Custom transition between vacuum hose and tool diameters.",
+        "description": "Utility part printed on demand to mate hose and nozzle with controlled clearance. Validated in daily use with PETG for heat and impact resistance.",
+        "highlights": [
+          "Fit trials with 0.2 mm clearance",
+          "1.6 mm walls and 30% infill",
+          "Vertical orientation for axial strength"
+        ]
+      },
+      "filament-rack": {
+        "title": "Filament Rack",
+        "summary": "Modular organizer for spools on the workbench.",
+        "description": "Modular frame that keeps spools aligned and labeled. Designed to grow by modules and fit narrow shelves.",
+        "highlights": [
+          "Press-fit assembly without screws",
+          "Compatible with 1 kg spools",
+          "Rigid PLA with reinforcing ribs"
+        ]
+      },
+      "desk-organizer": {
+        "title": "Desk Organizer",
+        "summary": "Compartments for pens, SD cards, and tool bits.",
+        "description": "Workbench piece with a clean silhouette and internal dividers. Balances function and presence in a maker setup.",
+        "highlights": [
+          "Visible layers as intentional texture",
+          "Optional TPU anti-slip base",
+          "Support-free print"
+        ]
+      },
+      "gearbox-proto": {
+        "title": "Gearbox Prototype",
+        "summary": "Fast validation of clearances and shaft alignment.",
+        "description": "Functional prototype to check meshing and noise before a final batch. Rapid PETG iterations with reused metal shafts.",
+        "highlights": [
+          "Clearances calibrated by trial",
+          "Split housing for inspection",
+          "Documented load cycles"
+        ]
+      },
+      "drone-mount": {
+        "title": "Drone Camera Mount",
+        "summary": "Lightweight mount with damping and quick access.",
+        "description": "Mechanical part for securing an action cam with controlled vibration. Prioritizes local stiffness and low mass.",
+        "highlights": [
+          "40% infill in load zones",
+          "Reinforced holes for M3 inserts",
+          "Geometry tuned for print time"
+        ]
+      },
+      "flexible-gasket": {
+        "title": "Flexible TPU Gasket",
+        "summary": "Elastic seal for enclosure and cable entry.",
+        "description": "95A TPU gasket printed to seal an improvised enclosure. Improves on hand-cut seals with better repeatability.",
+        "highlights": [
+          "Continuous perimeter without weak seams",
+          "Controlled compression at 1.2 mm",
+          "On-demand reprintable"
+        ]
+      },
+      "tabletop-mini": {
+        "title": "Tabletop Miniature",
+        "summary": "Reduced-scale figure with fine detail.",
+        "description": "Decorative miniature printed at low layer height to preserve relief. Minimal post-processing.",
+        "highlights": [
+          "0.12 mm layer height",
+          "Tree supports on critical zones",
+          "Optional painting after curing"
+        ]
+      },
+      "lamp-shade": {
+        "title": "Lamp Shade",
+        "summary": "Diffuser whose layer pattern filters light.",
+        "description": "Semi-open shade that turns layer lines into luminous texture. Designed for low-power LEDs.",
+        "highlights": [
+          "0.8 mm walls for translucency",
+          "Vase mode / spiralize",
+          "Fits a standard E27 adapter base"
+        ]
+      }
+    }
   }
 }
