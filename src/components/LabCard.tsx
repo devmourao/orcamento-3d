@@ -35,7 +35,7 @@ export function LabCard({ project, onOpen, index }: LabCardProps) {
       <div className="flex flex-1 flex-col gap-3 p-4 sm:p-5">
         <div className="space-y-1.5">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-md bg-[color:var(--maker-accent-soft)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[color:var(--maker-accent)]">
+            <span className="rounded-md bg-[color:var(--maker-brand-soft)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[color:var(--maker-brand)]">
               {t(`lab.categories.${project.category}`)}
             </span>
             <span className="font-mono text-[11px] text-[color:var(--maker-muted)]">
