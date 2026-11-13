@@ -19,7 +19,7 @@ export function QuoteSection({
   return (
     <section
       id="orcamento"
-      className="scroll-mt-28 w-full space-y-8"
+      className="scroll-mt-[calc(var(--maker-header-height)+1rem)] w-full space-y-8"
       aria-labelledby="quote-heading"
     >
       <div className="mx-auto max-w-2xl space-y-3 text-center">
