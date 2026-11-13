@@ -6,7 +6,9 @@
     "navQuote": "Quote",
     "navLab": "Laboratory",
     "navSources": "Sources",
-    "navHelp": "Help"
+    "navHelp": "Help",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "cta": {
     "toQuote": "Request a quote",

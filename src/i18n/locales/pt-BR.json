@@ -6,7 +6,9 @@
     "navQuote": "Orçamento",
     "navLab": "Laboratório",
     "navSources": "Fontes",
-    "navHelp": "Ajuda"
+    "navHelp": "Ajuda",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
   "cta": {
     "toQuote": "Pedir orçamento",
