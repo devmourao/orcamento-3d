@@ -2,6 +2,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Laboratory } from './components/Laboratory';
 import { ModelSources } from './components/ModelSources';
+import { HelpSection } from './components/HelpSection';
 import { QuoteSection } from './components/QuoteSection';
 import { useCart } from './hooks/useCart';
 
@@ -21,6 +22,7 @@ function App() {
         <main className="flex flex-1 flex-col gap-16 pb-10 md:gap-20">
           <Laboratory />
           <ModelSources />
+          <HelpSection />
           <QuoteSection
             items={items}
             onAddItem={addItem}

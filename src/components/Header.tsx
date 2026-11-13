@@ -49,6 +49,12 @@ export function Header() {
               {t('header.navSources')}
             </a>
             <a
+              href="#ajuda"
+              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-brand-soft)] hover:text-[color:var(--maker-brand)]"
+            >
+              {t('header.navHelp')}
+            </a>
+            <a
               href="#orcamento"
               className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-accent-soft)] hover:text-[color:var(--maker-accent)]"
             >

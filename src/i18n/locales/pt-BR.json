@@ -5,17 +5,55 @@
     "subtitle": "Impressão 3D sob medida de alta precisão",
     "navQuote": "Orçamento",
     "navLab": "Laboratório",
-    "navSources": "Fontes"
+    "navSources": "Fontes",
+    "navHelp": "Ajuda"
   },
   "cta": {
     "toQuote": "Pedir orçamento",
     "printLikeThis": "Quero imprimir algo assim",
+    "needHelpLikeThis": "Preciso de ajuda com algo assim",
     "haveFile": "Já tenho o arquivo — pedir orçamento"
   },
   "quote": {
     "eyebrow": "maker.mourao.info / pedido",
     "title": "Orçamento",
-    "subtitle": "Descreva a peça, envie o link do modelo e receba o retorno pelo WhatsApp."
+    "subtitle": "Descreva a peça, envie o link do modelo e receba o retorno pelo WhatsApp.",
+    "helpBridge": "Ainda sem modelo?",
+    "helpLink": "Peça ajuda para escolher"
+  },
+  "help": {
+    "eyebrow": "maker.mourao.info / ajuda",
+    "title": "Precisa de ajuda para escolher?",
+    "subtitle": "Descreva o uso e a gente indica o caminho — modelo, material e viabilidade — pelo WhatsApp.",
+    "intentLabel": "Tipo de ajuda",
+    "intents": {
+      "no-model": {
+        "label": "Não sei qual modelo",
+        "hint": "Quero orientação para encontrar ou definir a peça."
+      },
+      "have-idea": {
+        "label": "Tenho uma ideia",
+        "hint": "Sei o que preciso, mas ainda não tenho o arquivo."
+      },
+      "adapt-lab": {
+        "label": "Adaptar uma peça",
+        "hint": "Vi algo no Laboratório e quero uma variação."
+      }
+    },
+    "fields": {
+      "need": "O que você precisa",
+      "needPlaceholder": "Ex.: suporte para câmera no capacete, encaixe firme e leve",
+      "context": "Onde / como vai usar",
+      "contextPlaceholder": "Ex.: uso diário, ambiente externo, peça de reposição",
+      "deadline": "Prazo (opcional)",
+      "deadlinePlaceholder": "Ex.: até sexta / sem urgência",
+      "reference": "Link de referência (opcional)",
+      "referencePlaceholder": "Foto, Printables, Drive…"
+    },
+    "relatedPiece": "Referência do Laboratório: {{title}}",
+    "prefillFromLab": "Quero algo parecido com \"{{title}}\", mas preciso de ajuda para definir o modelo.",
+    "submit": "Conversar no WhatsApp",
+    "whatsappGreeting": "Olá! Preciso de ajuda para escolher/adaptar um modelo de impressão 3D via maker.mourao.info."
   },
   "sources": {
     "eyebrow": "maker.mourao.info / fontes",

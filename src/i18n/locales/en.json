@@ -5,17 +5,55 @@
     "subtitle": "Custom high-precision 3D printing on demand",
     "navQuote": "Quote",
     "navLab": "Laboratory",
-    "navSources": "Sources"
+    "navSources": "Sources",
+    "navHelp": "Help"
   },
   "cta": {
     "toQuote": "Request a quote",
     "printLikeThis": "I want something like this printed",
+    "needHelpLikeThis": "I need help with something like this",
     "haveFile": "I have the file — request a quote"
   },
   "quote": {
     "eyebrow": "maker.mourao.info / order",
     "title": "Quote",
-    "subtitle": "Describe the part, share the model link, and get a reply on WhatsApp."
+    "subtitle": "Describe the part, share the model link, and get a reply on WhatsApp.",
+    "helpBridge": "No model yet?",
+    "helpLink": "Ask for help choosing one"
+  },
+  "help": {
+    "eyebrow": "maker.mourao.info / help",
+    "title": "Need help choosing?",
+    "subtitle": "Describe the use case and we’ll guide model, material, and feasibility over WhatsApp.",
+    "intentLabel": "Type of help",
+    "intents": {
+      "no-model": {
+        "label": "I don’t know which model",
+        "hint": "I want guidance to find or define the part."
+      },
+      "have-idea": {
+        "label": "I have an idea",
+        "hint": "I know what I need, but I don’t have the file yet."
+      },
+      "adapt-lab": {
+        "label": "Adapt a piece",
+        "hint": "I saw something in the Laboratory and want a variation."
+      }
+    },
+    "fields": {
+      "need": "What do you need",
+      "needPlaceholder": "e.g., helmet camera mount, firm and lightweight fit",
+      "context": "Where / how it will be used",
+      "contextPlaceholder": "e.g., daily use, outdoors, spare part",
+      "deadline": "Deadline (optional)",
+      "deadlinePlaceholder": "e.g., by Friday / no rush",
+      "reference": "Reference link (optional)",
+      "referencePlaceholder": "Photo, Printables, Drive…"
+    },
+    "relatedPiece": "Laboratory reference: {{title}}",
+    "prefillFromLab": "I want something like \"{{title}}\", but I need help defining the model.",
+    "submit": "Chat on WhatsApp",
+    "whatsappGreeting": "Hello! I need help choosing/adapting a 3D printing model via maker.mourao.info."
   },
   "sources": {
     "eyebrow": "maker.mourao.info / sources",
