@@ -35,6 +35,15 @@ export function QuoteSection({
         <p className="text-sm leading-relaxed text-[color:var(--maker-muted)] sm:text-base">
           {t('quote.subtitle')}
         </p>
+        <p className="text-sm text-[color:var(--maker-muted)]">
+          {t('quote.helpBridge')}{' '}
+          <a
+            href="#ajuda"
+            className="font-semibold text-[color:var(--maker-accent)] underline-offset-2 hover:underline"
+          >
+            {t('quote.helpLink')}
+          </a>
+        </p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 interface SectionCtaProps {
   /** i18n key under `cta.*`, defaults to primary quote CTA */
   labelKey?: string;
+  href?: string;
   variant?: 'primary' | 'ghost';
   className?: string;
   onNavigate?: () => void;
@@ -10,6 +11,7 @@ interface SectionCtaProps {
 
 export function SectionCta({
   labelKey = 'cta.toQuote',
+  href = '#orcamento',
   variant = 'primary',
   className = '',
   onNavigate,
@@ -26,7 +28,7 @@ export function SectionCta({
 
   return (
     <a
-      href="#orcamento"
+      href={href}
       onClick={onNavigate}
       className={`${base} ${styles} ${className}`}
     >

@@ -141,7 +141,14 @@ export function Laboratory() {
         <p className="max-w-md text-sm text-[color:var(--maker-muted)]">
           {t('lab.ctaHint')}
         </p>
-        <SectionCta labelKey="cta.printLikeThis" />
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <SectionCta labelKey="cta.printLikeThis" />
+          <SectionCta
+            labelKey="cta.needHelpLikeThis"
+            href="#ajuda"
+            variant="ghost"
+          />
+        </div>
       </div>
 
       <LabDetailModal item={selected} onClose={() => setSelected(null)} />

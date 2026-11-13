@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { LabItem } from '../types/lab';
+import { openHelpFromLab } from '../utils/helpHandoff';
 import { LabVisual } from './LabVisual';
 import { SectionCta } from './SectionCta';
 
@@ -147,6 +148,16 @@ export function LabDetailModal({ item, onClose }: LabDetailModalProps) {
             labelKey="cta.printLikeThis"
             className="text-xs"
             onNavigate={onClose}
+          />
+          <SectionCta
+            labelKey="cta.needHelpLikeThis"
+            href="#ajuda"
+            variant="ghost"
+            className="text-xs"
+            onNavigate={() => {
+              openHelpFromLab(item.title);
+              onClose();
+            }}
           />
           {item.blogUrl && (
             <a
