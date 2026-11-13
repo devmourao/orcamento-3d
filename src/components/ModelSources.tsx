@@ -8,7 +8,7 @@ export function ModelSources() {
   return (
     <section
       id="fontes"
-      className="scroll-mt-28 w-full space-y-8"
+      className="scroll-mt-[calc(var(--maker-header-height)+1rem)] w-full space-y-8"
       aria-labelledby="sources-heading"
     >
       <div className="mx-auto max-w-2xl space-y-3 text-center">

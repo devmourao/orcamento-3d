@@ -16,8 +16,15 @@
   --maker-brand-strong: #2f6a9c;
   --maker-brand-soft: rgba(62, 126, 180, 0.18);
   --maker-success: #2f9e7a;
+  --maker-header-height: 4.25rem;
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --maker-header-height: 4.5rem;
+  }
 }
 
 @layer base {

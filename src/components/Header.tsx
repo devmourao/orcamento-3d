@@ -2,64 +2,54 @@ import { useTranslation } from 'react-i18next';
 import makerLogo from '../assets/maker-logo.png';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
+const NAV_ITEMS = [
+  { href: '#laboratorio', labelKey: 'header.navLab', tone: 'brand' },
+  { href: '#fontes', labelKey: 'header.navSources', tone: 'brand' },
+  { href: '#ajuda', labelKey: 'header.navHelp', tone: 'brand' },
+  { href: '#orcamento', labelKey: 'header.navQuote', tone: 'accent' },
+] as const;
+
 export function Header() {
   const { t } = useTranslation();
 
   return (
-    <header className="sticky top-0 z-40 -mx-4 mb-10 border-b border-[color:var(--maker-border)] bg-[color:var(--maker-bg)]/80 px-4 backdrop-blur-xl sm:-mx-6 sm:px-6">
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
-        <div className="min-w-0">
-          <a href="#topo" className="group inline-flex items-start gap-3 sm:gap-4">
-            <img
-              src={makerLogo}
-              alt=""
-              width={56}
-              height={56}
-              className="mt-0.5 h-12 w-12 shrink-0 object-contain drop-shadow-[0_8px_18px_rgba(62,126,180,0.35)] sm:h-14 sm:w-14"
-            />
-            <span className="min-w-0 inline-flex flex-col gap-1">
-              <span className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--maker-accent)]">
-                {t('header.brand')}
-              </span>
-              <h1 className="font-display text-2xl font-extrabold tracking-tight text-[color:var(--maker-text)] sm:text-3xl">
-                {t('header.title')}
-              </h1>
-              <p className="text-sm font-medium text-[color:var(--maker-muted)]">
-                {t('header.subtitle')}
-              </p>
-            </span>
-          </a>
-        </div>
+    <header className="maker-header fixed inset-x-0 top-0 z-50 border-b border-[color:var(--maker-border)] bg-[color:var(--maker-bg)]/90 backdrop-blur-xl">
+      <div className="mx-auto flex h-[var(--maker-header-height)] w-full max-w-5xl items-center justify-between gap-3 px-4 sm:px-6">
+        <a
+          href="#topo"
+          className="group flex min-w-0 items-center gap-2.5"
+          aria-label={t('header.brand')}
+        >
+          <img
+            src={makerLogo}
+            alt=""
+            width={40}
+            height={40}
+            className="h-9 w-9 shrink-0 object-contain drop-shadow-[0_6px_14px_rgba(62,126,180,0.35)] sm:h-10 sm:w-10"
+          />
+          <span className="truncate font-mono text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--maker-accent)] sm:text-sm">
+            {t('header.brand')}
+          </span>
+        </a>
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <nav
-            className="flex flex-wrap items-center gap-1 rounded-xl border border-[color:var(--maker-border)] bg-[color:var(--maker-surface)] p-1"
+            className="flex max-w-[58vw] items-center gap-0.5 overflow-x-auto rounded-xl border border-[color:var(--maker-border)] bg-[color:var(--maker-surface)] p-1 sm:max-w-none"
             aria-label="Primary"
           >
-            <a
-              href="#laboratorio"
-              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-brand-soft)] hover:text-[color:var(--maker-brand)]"
-            >
-              {t('header.navLab')}
-            </a>
-            <a
-              href="#fontes"
-              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-brand-soft)] hover:text-[color:var(--maker-brand)]"
-            >
-              {t('header.navSources')}
-            </a>
-            <a
-              href="#ajuda"
-              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-brand-soft)] hover:text-[color:var(--maker-brand)]"
-            >
-              {t('header.navHelp')}
-            </a>
-            <a
-              href="#orcamento"
-              className="rounded-lg px-3 py-1.5 text-xs font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-accent-soft)] hover:text-[color:var(--maker-accent)]"
-            >
-              {t('header.navQuote')}
-            </a>
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className={
+                  item.tone === 'accent'
+                    ? 'shrink-0 rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-accent-soft)] hover:text-[color:var(--maker-accent)] sm:px-3 sm:text-xs'
+                    : 'shrink-0 rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-[color:var(--maker-muted)] transition-colors hover:bg-[color:var(--maker-brand-soft)] hover:text-[color:var(--maker-brand)] sm:px-3 sm:text-xs'
+                }
+              >
+                {t(item.labelKey)}
+              </a>
+            ))}
           </nav>
           <LanguageSwitcher />
         </div>
