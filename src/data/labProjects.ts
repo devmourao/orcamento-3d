@@ -1,10 +1,22 @@
-import type { LabProject } from '../types/lab';
+import type { LabCategoryId } from '../types/lab';
+import type { FilamentMaterial } from '../types/order';
 
 /**
- * Showcase pieces for the Laboratório gallery.
+ * Local fallback samples used when the blog feed has no
+ * maker + laboratorio + category posts yet (or when the feed fails).
  * Copy lives in i18n under `lab.projects.<id>`.
  */
-export const labProjects: LabProject[] = [
+export interface LocalLabProject {
+  id: string;
+  category: LabCategoryId;
+  featured?: boolean;
+  material: FilamentMaterial;
+  year: number;
+  accent: string;
+  modelUrl?: string;
+}
+
+export const labProjects: LocalLabProject[] = [
   {
     id: 'hose-adapter',
     category: 'utilities',

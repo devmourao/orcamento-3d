@@ -1,10 +1,10 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { labProjects } from '../data/labProjects';
+import { loadLabItems } from '../lib/fetchLabItems';
 import {
   LAB_CATEGORIES,
   type LabCategoryId,
-  type LabProject,
+  type LabItem,
 } from '../types/lab';
 import { LabCard } from './LabCard';
 import { LabDetailModal } from './LabDetailModal';
@@ -15,18 +15,43 @@ type FilterId = 'all' | LabCategoryId;
 export function Laboratory() {
   const { t } = useTranslation();
   const [filter, setFilter] = useState<FilterId>('all');
-  const [selected, setSelected] = useState<LabProject | null>(null);
+  const [selected, setSelected] = useState<LabItem | null>(null);
+  const [items, setItems] = useState<LabItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [source, setSource] = useState<'blog' | 'local'>('local');
+  const [error, setError] = useState<string | null>(null);
 
   const filters: FilterId[] = useMemo(() => ['all', ...LAB_CATEGORIES], []);
 
-  const visibleProjects = useMemo(() => {
+  useEffect(() => {
+    let cancelled = false;
+
+    (async () => {
+      setLoading(true);
+      setError(null);
+
+      const result = await loadLabItems((key, options) => t(key, options));
+      if (cancelled) return;
+
+      setItems(result.items);
+      setSource(result.source);
+      setError(result.error ?? null);
+      setLoading(false);
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [t]);
+
+  const visibleItems = useMemo(() => {
     const filtered =
       filter === 'all'
-        ? labProjects
-        : labProjects.filter((project) => project.category === filter);
+        ? items
+        : items.filter((item) => item.category === filter);
 
     return [...filtered].sort((a, b) => Number(b.featured) - Number(a.featured));
-  }, [filter]);
+  }, [filter, items]);
 
   return (
     <section
@@ -78,7 +103,21 @@ export function Laboratory() {
         })}
       </div>
 
-      {visibleProjects.length === 0 ? (
+      {source === 'local' && !loading && (
+        <p className="text-center text-xs text-[color:var(--maker-muted)]">
+          {error ? t('lab.feedError') : t('lab.feedEmptyHint')}
+        </p>
+      )}
+
+      {loading ? (
+        <div className="flex items-center justify-center gap-2 py-20 text-sm text-[color:var(--maker-muted)]">
+          <span
+            className="h-4 w-4 animate-spin rounded-full border-2 border-[color:var(--maker-border)] border-t-[color:var(--maker-accent)]"
+            aria-hidden="true"
+          />
+          {t('lab.loading')}
+        </div>
+      ) : visibleItems.length === 0 ? (
         <p className="py-16 text-center text-sm text-[color:var(--maker-muted)]">
           {t('lab.empty')}
         </p>
@@ -87,10 +126,10 @@ export function Laboratory() {
           key={filter}
           className="lab-grid grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {visibleProjects.map((project, index) => (
+          {visibleItems.map((item, index) => (
             <LabCard
-              key={project.id}
-              project={project}
+              key={item.id}
+              item={item}
               index={index}
               onOpen={setSelected}
             />
@@ -105,7 +144,7 @@ export function Laboratory() {
         <SectionCta labelKey="cta.printLikeThis" />
       </div>
 
-      <LabDetailModal project={selected} onClose={() => setSelected(null)} />
+      <LabDetailModal item={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }

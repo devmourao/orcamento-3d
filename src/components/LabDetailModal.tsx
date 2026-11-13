@@ -1,19 +1,19 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import type { LabProject } from '../types/lab';
+import type { LabItem } from '../types/lab';
 import { LabVisual } from './LabVisual';
 import { SectionCta } from './SectionCta';
 
 interface LabDetailModalProps {
-  project: LabProject | null;
+  item: LabItem | null;
   onClose: () => void;
 }
 
-export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
+export function LabDetailModal({ item, onClose }: LabDetailModalProps) {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (!project) return;
+    if (!item) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose();
@@ -27,16 +27,11 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', onKeyDown);
     };
-  }, [project, onClose]);
+  }, [item, onClose]);
 
-  if (!project) return null;
+  if (!item) return null;
 
-  const highlights = t(`lab.projects.${project.id}.highlights`, {
-    returnObjects: true,
-  });
-  const highlightList = Array.isArray(highlights)
-    ? (highlights as string[])
-    : [];
+  const isHtmlDescription = /<\/?[a-z][\s\S]*>/i.test(item.description);
 
   return (
     <div
@@ -53,23 +48,23 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
       />
 
       <div className="lab-modal relative z-10 flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-[color:var(--maker-border)] bg-[color:var(--maker-surface)] shadow-2xl">
-        <LabVisual project={project} className="h-44 w-full shrink-0 sm:h-52" />
+        <LabVisual item={item} className="h-44 w-full shrink-0 sm:h-52" />
 
         <div className="flex items-start justify-between gap-4 border-b border-[color:var(--maker-border)] px-5 py-4 sm:px-6">
           <div className="min-w-0 space-y-2">
             <div className="flex flex-wrap items-center gap-2">
               <span className="rounded-md bg-[color:var(--maker-brand-soft)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[color:var(--maker-brand)]">
-                {t(`lab.categories.${project.category}`)}
+                {t(`lab.categories.${item.category}`)}
               </span>
               <span className="font-mono text-[11px] text-[color:var(--maker-muted)]">
-                {project.material} · {project.year}
+                {[item.material, item.year].filter(Boolean).join(' · ')}
               </span>
             </div>
             <h2
               id="lab-modal-title"
               className="font-display text-2xl font-bold tracking-tight text-[color:var(--maker-text)]"
             >
-              {t(`lab.projects.${project.id}.title`)}
+              {item.title}
             </h2>
           </div>
 
@@ -84,26 +79,33 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
         </div>
 
         <div className="space-y-5 overflow-y-auto px-5 py-5 sm:px-6">
-          <p className="text-sm leading-relaxed text-[color:var(--maker-muted)] sm:text-base">
-            {t(`lab.projects.${project.id}.description`)}
-          </p>
+          {isHtmlDescription ? (
+            <div
+              className="lab-prose text-sm leading-relaxed text-[color:var(--maker-muted)] sm:text-base"
+              dangerouslySetInnerHTML={{ __html: item.description }}
+            />
+          ) : (
+            <p className="text-sm leading-relaxed text-[color:var(--maker-muted)] sm:text-base">
+              {item.description}
+            </p>
+          )}
 
-          {highlightList.length > 0 && (
+          {item.highlights.length > 0 && item.source === 'local' && (
             <div className="space-y-2">
               <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-[color:var(--maker-text)]">
                 {t('lab.highlights')}
               </h3>
               <ul className="space-y-2">
-                {highlightList.map((item) => (
+                {item.highlights.map((highlight) => (
                   <li
-                    key={item}
+                    key={highlight}
                     className="flex gap-2 text-sm text-[color:var(--maker-muted)]"
                   >
                     <span
                       className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--maker-accent)]"
                       aria-hidden="true"
                     />
-                    <span>{item}</span>
+                    <span>{highlight}</span>
                   </li>
                 ))}
               </ul>
@@ -111,20 +113,22 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
           )}
 
           <dl className="grid grid-cols-2 gap-3 rounded-xl border border-[color:var(--maker-border)] bg-[color:var(--maker-bg)]/60 p-4 text-sm sm:grid-cols-3">
-            <div>
-              <dt className="text-[11px] uppercase tracking-wider text-[color:var(--maker-muted)]">
-                {t('lab.specs.material')}
-              </dt>
-              <dd className="mt-1 font-semibold text-[color:var(--maker-text)]">
-                {project.material}
-              </dd>
-            </div>
+            {item.material && (
+              <div>
+                <dt className="text-[11px] uppercase tracking-wider text-[color:var(--maker-muted)]">
+                  {t('lab.specs.material')}
+                </dt>
+                <dd className="mt-1 font-semibold text-[color:var(--maker-text)]">
+                  {item.material}
+                </dd>
+              </div>
+            )}
             <div>
               <dt className="text-[11px] uppercase tracking-wider text-[color:var(--maker-muted)]">
                 {t('lab.specs.category')}
               </dt>
               <dd className="mt-1 font-semibold text-[color:var(--maker-text)]">
-                {t(`lab.categories.${project.category}`)}
+                {t(`lab.categories.${item.category}`)}
               </dd>
             </div>
             <div>
@@ -132,7 +136,7 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
                 {t('lab.specs.year')}
               </dt>
               <dd className="mt-1 font-semibold text-[color:var(--maker-text)]">
-                {project.year}
+                {item.year}
               </dd>
             </div>
           </dl>
@@ -144,9 +148,19 @@ export function LabDetailModal({ project, onClose }: LabDetailModalProps) {
             className="text-xs"
             onNavigate={onClose}
           />
-          {project.modelUrl && (
+          {item.blogUrl && (
             <a
-              href={project.modelUrl}
+              href={item.blogUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--maker-brand)]/40 px-3 py-2 text-xs font-semibold text-[color:var(--maker-brand)] transition-colors hover:bg-[color:var(--maker-brand-soft)]"
+            >
+              {t('lab.viewOnBlog')}
+            </a>
+          )}
+          {item.modelUrl && (
+            <a
+              href={item.modelUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--maker-accent)]/40 px-3 py-2 text-xs font-semibold text-[color:var(--maker-accent)] transition-colors hover:bg-[color:var(--maker-accent-soft)]"

@@ -78,6 +78,23 @@
   animation: lab-modal-in 240ms ease both;
 }
 
+.lab-prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.lab-prose a {
+  color: var(--maker-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.lab-prose p {
+  margin: 0 0 0.85rem;
+}
+
 @keyframes lab-card-in {
   from {
     opacity: 0;
